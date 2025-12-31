@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes de Atenção</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="tela-inicial" class="tela ativa">
+            <h1>Testes de Atenção</h1>
+            <p>Preencha os seus dados para iniciar.</p>
+            <div class="campos-topo">
+                <input type="text" id="nomeAluno" placeholder="Nome Completo">
+                <input type="email" id="emailAluno" placeholder="E-mail">
+            </div>
+            <button onclick="irParaOrientacoes()">Iniciar</button>
+        </div>
+
+        <div id="tela-orientacoes" class="tela">
+            <h2 id="titulo-orientacao">Orientações</h2>
+            <p id="texto-orientacao">Instruções do teste.</p>
+            <button onclick="decidirInicioTeste()">Estou Pronto</button>
+        </div>
+
+        <div id="tela-teste" class="tela">
+            <div class="header-teste">
+                <div id="cronometro">00:10</div>
+                <div id="status-teste">Instrução dinâmica aqui</div>
+            </div>
+            <div class="grid-wrapper">
+                <div id="overlay" class="overlay-grid"></div>
+            </div>
+            <div id="area-proxima-etapa" style="display: none;">
+                <p>Tempo encerrado!</p>
+                <button onclick="clicarBotaoProximo()">Avançar para Próxima Etapa</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
