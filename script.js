@@ -2,9 +2,9 @@ const urlWebhook = "https://hook.us2.make.com/nohbwfnl23c550xibh284m4vfk6vnr9x";
 
 // Tempos específicos por etapa em segundos
 const TEMPOS_POR_ETAPA = {
-    1: 5,  // 1 minuto e 30 segundos
-    2: 5, // 3 minutos
-    3: 5  // 2 minutos
+    1: 90,  // 1 minuto e 30 segundos
+    2: 180, // 3 minutos
+    3: 120  // 2 minutos
 };
 
 let etapaAtual = 1; 
@@ -176,4 +176,5 @@ async function enviarParaMake() {
             body: JSON.stringify(dados) 
         }); 
     } catch (e) { console.error("Erro no envio"); }
+
 }
